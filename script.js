@@ -1,7 +1,7 @@
 "use strict";
 
 function changeColor(event) {
-  event.srcElement.style.backgroundColor = "red";
+  event.srcElement.style.backgroundColor = "black";
 }
 
 function drawGrid(numberOfSquaresPerSide) {
@@ -17,7 +17,7 @@ function drawGrid(numberOfSquaresPerSide) {
     const square = document.createElement("div");
     square.style.height = `${squareContentSide}px`;
     square.style.width = `${squareContentSide}px`;
-    square.style.border = "1px solid red";
+    square.style.border = "1px solid hsl(0, 0%, 95%)";
     square.style.cssFloat = "left";
 
     square.addEventListener("mouseenter", changeColor, {once: true})
