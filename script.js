@@ -1,5 +1,9 @@
 "use strict";
 
+function changeColor(event) {
+  event.srcElement.style.backgroundColor = "red";
+}
+
 const container = document.querySelector(".grid-container");
 const containerHeight = container.clientWidth;
 const containerWidth = container.clientHeight;
@@ -17,5 +21,8 @@ for (let i = 0; i < numberOfSquares; i++) {
   square.style.margin = `${marginBetweenSquares}px`;
   square.style.border = "1px solid red";
   square.style.cssFloat = "left";
+
+  square.addEventListener("mouseenter", changeColor, {once: true})
+
   container.appendChild(square);
 }
